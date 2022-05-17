@@ -1,36 +1,35 @@
-.sign-in-form {
+.sign-up-form {
 	background-color: white;
-    padding: 20px 50px;
-    margin: 136px 418px;
-    width: 400px;
-    height: 317px;
-    border-radius: 5px;
-    letter-spacing: 1px;
+	padding: 20px 50px;
+	margin: 65px 418px;
+	width: 400px;
+	height: 508px;
+	border-radius: 5px;
+	letter-spacing: 1px;
 }
 
 .login-heading {
 	font-family: Arial;
 	text-align: center;
 }
+
 .login-terms {
 	font-size: small;
 }
 
 .remember-me {
 	position: absolute;
-	display: flex;
+	width: -moz-fit-content;
 	width: 10px;
-	left: 595px;
+	left: 159px;
 	text-align: center;
-	flex-direction: row;
-	justify-content: center;
 }
 
 .remember-me-label {
 	position: absolute;
 	width: 134px;
 	left: 12px;
-	margin-top: -19px;
+	margin-top: 2px;
 }
 
 .login-user-input {
@@ -40,15 +39,6 @@
 	border: 1px solid rgb(194, 189, 189);
 	border-radius: 4px;
 	box-sizing: border-box;
-}
-
-h2 {
-	font-family: Arial;
-	text-align: center;
-}
-
-div {
-	padding-bottom: 5px;
 }
 
 button {

@@ -1,91 +1,55 @@
 import React from "react";
 import "./index.css";
-import { TextField, Box } from "@mui/material";
 
 class Login extends React.Component {
-  // constructor(props) {
+  constructor() {
+    super();
+    this.state = { uname: '', password: '' };
+  }
+  handleChange = (e) => {
+    const { target: { name, value } } = e
+    this.setState({
+      [name]: value
+    })
 
-  // }
-  registerUser = () => {
-    console.log("signup");
-  };
+  }
+  handleSubmit = () => {
+    const { uname, password } = this.state
+    if (uname && password) {
+
+    } else {
+
+    }
+  }
   render() {
+    const { uname, password } = this.state
     return (
-      <div class="cont">
-        <div class="form sign-in">
-          <h2>Sign In</h2>
-          {/* <label> */}
-          <Box
-            component="form"
-            sx={{
-              "& > :not(style)": { m: 1, width: "25ch" },
-            }}
-            noValidate
-            autoComplete="off"
-          >
-            <TextField
-              required
-              variant="outlined"
-              id="outlined-required"
-              label="User Name"
-              defaultValue=""
-            />
-            {/* <span>Email Address</span>
-            <input type="email" name="email" />
-          </label> */}
-            <TextField id="filled-basic" label="Filled" variant="filled" />
-            {/* <label>
-            <span>Password</span>
-            <input type="password" name="password" />
-          </label> */}
-            <button
-              class="submit"
-              type="button"
-              onClick={() => this.registerUser()}
-            >
-              Sign In
-            </button>
-            <p class="forgot-pass">Forgot Password ?</p>
-          </Box>
-          {/* 
-          <div class="social-media">
-            <ul>
-              <li>
-                <img src="images/facebook.png" />
-              </li>
-              <li>
-                <img src="images/twitter.png" />
-              </li>
-              <li>
-                <img src="images/linkedin.png" />
-              </li>
-              <li>
-                <img src="images/instagram.png" />
-              </li>
-            </ul>
-          </div> */}
+      <div className="sign-in-form">
+        <div className="login-heading">
+          Login
         </div>
-
-        <div class="sub-cont">
-          <div class="img">
-            <div class="img-text m-up">
-              <h2>New here?</h2>
-              <p>Sign up and discover great amount of new opportunities!</p>
-            </div>
-            <div class="img-text m-in">
-              <h2>One of us?</h2>
-              <p>
-                If you already has an account, just sign in. We've missed you!
-              </p>
-            </div>
-            <div class="img-btn">
-              <span class="m-up" onClick={() => this.registerUser()}>
-                Sign Up
-              </span>
-              <span class="m-in">Sign In</span>
-            </div>
-          </div>
+        <div >
+          <input
+            type="email"
+            id="userId"
+            name="uname"
+            value={uname}
+            placeholder="User name"
+            required
+            className="login-user-input"
+            onChange={(e) => this.handleChange(e)}
+          />
         </div>
+        <div >
+          <input type="password" id="pass" name="password" onChange={(e) => this.handleChange(e)} value={password} required placeholder="Password" className="login-user-input" />
+        </div>
+        {/* <div className="remember-me">
+          <input type="checkbox" id="checkbox" name="checkAccount" />
+          <label for="checkbox" className="remember-me-label">Remember me</label>
+        </div> */}
+        <p className="login-terms">By continuing, you agree to the Terms of Use and Privacy Policy.</p>
+        <button type="submit" onClick={() => this.handleSubmit()}>LOG IN</button>
+        <a href="/register" >New User? </a>
       </div>
     );
   }
