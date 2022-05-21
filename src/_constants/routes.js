@@ -1,6 +1,7 @@
 const ROUTES = {
     LOGIN: '',
-    REGISTER: '/register'
+    REGISTER: '/register',
+    HOME:'/home'
   };
   
   export default ROUTES;

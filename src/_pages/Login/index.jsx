@@ -1,10 +1,12 @@
 import React from "react";
 import "./index.css";
+import ROUTES from "../../_constants/routes";
+import { withRouter } from 'react-router-dom'
 
 class Login extends React.Component {
   constructor() {
     super();
-    this.state = { uname: '', password: '' };
+    this.state = { uname: '', password: '', error: '' };
   }
   handleChange = (e) => {
     const { target: { name, value } } = e
@@ -16,13 +18,16 @@ class Login extends React.Component {
   handleSubmit = () => {
     const { uname, password } = this.state
     if (uname && password) {
-
+      this.props.history.push(ROUTES.HOME)
     } else {
-
+      this.setState({
+        error: 'Please fill all details'
+      })
     }
+
   }
   render() {
-    const { uname, password } = this.state
+    const { uname, password, error } = this.state
     return (
       <div className="sign-in-form">
         <div className="login-heading">
@@ -49,10 +54,11 @@ class Login extends React.Component {
         </div> */}
         <p className="login-terms">By continuing, you agree to the Terms of Use and Privacy Policy.</p>
         <button type="submit" onClick={() => this.handleSubmit()}>LOG IN</button>
+        <div className="error-message" >{error}</div>
         <a href="/register" >New User? </a>
       </div>
     );
   }
 }
 
-export default Login;
+export default withRouter(Login);
