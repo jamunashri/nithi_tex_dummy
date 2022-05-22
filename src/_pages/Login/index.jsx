@@ -1,4 +1,4 @@
-import React from "react";
+/* import React from "react";
 import "./index.css";
 import ROUTES from "../../_constants/routes";
 import { withRouter } from 'react-router-dom'
@@ -51,8 +51,8 @@ class Login extends React.Component {
         {/* <div className="remember-me">
           <input type="checkbox" id="checkbox" name="checkAccount" />
           <label for="checkbox" className="remember-me-label">Remember me</label>
-        </div> */}
-        <p className="login-terms">By continuing, you agree to the Terms of Use and Privacy Policy.</p>
+        </div> */
+        {/* <p className="login-terms">By continuing, you agree to the Terms of Use and Privacy Policy.</p>
         <button type="submit" onClick={() => this.handleSubmit()}>LOG IN</button>
         <div className="error-message" >{error}</div>
         <a href="/register" >New User? </a>
@@ -60,5 +60,6 @@ class Login extends React.Component {
     );
   }
 }
-
+ */}/* 
 export default withRouter(Login);
+ */ 
