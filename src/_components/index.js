@@ -5,5 +5,5 @@ import Button from './Button'
 export {
     Dropdown,
     Navbar,
-    Button
+    Button,
 }
