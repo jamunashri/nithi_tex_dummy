@@ -1,15 +1,18 @@
 import React from "react";
-import { Navbar } from "../../_components";
+import './index.css'
+import { Header, Footer } from '../../_components/index'
 class Home extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+
+    };
   }
   render() {
     return (
       <div>
-        <Navbar />
-        Home page
+        <Header />
+        <Footer />
       </div>
     );
   }
