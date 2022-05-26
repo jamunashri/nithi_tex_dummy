@@ -1,22 +1,17 @@
 import "./App.css";
-import { Login, Register, Home } from "./_pages/index";
-import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
-import ROUTES from "./_constants/routes";
-import { createBrowserHistory } from "history";
-
-const history = createBrowserHistory();
+import { Home, Authentication } from "./_pages/index";
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { createBrowserHistory } from 'history'
 
 function App() {
+  const history = createBrowserHistory()
   return (
-    <div className="App">
-      <Router history={history}>
-        <Switch>
-          <Route exact path={"/"} component={Login} />
-          <Route exact path={ROUTES.REGISTER} component={Register} />
-          <Route exact path={ROUTES.HOME} component={Home} />
-        </Switch>
-      </Router>
-    </div>
+    <BrowserRouter history={history}>
+      <Switch>
+        <Route exact path={"/"}><Authentication /></Route>
+        <Route exact path={'/home'} ><Home /></Route>
+      </Switch>
+    </BrowserRouter>
   );
 }
 

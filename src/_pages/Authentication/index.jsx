@@ -1,97 +1,114 @@
-import React,{Component} from "react";
-import ReactModalLogin from "react-modal-login";
-
-// import { facebookConfig, googleConfig } from "social-config";
-
-export default class Authentication extends Component {
+import React, { Component } from "react";
+import './index.css'
+import { withRouter } from 'react-router-dom'
+import ROUTES from "../../_constants/routes";
+class Authentication extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
-      showModal: false,
-      loading: false,
-      error: null
+      isSignup: false,
+      uname: "",
+      pw: "",
+      error: "",
+      email: "",
+      password: "",
+      cpassword: ""
     };
   }
-
-  openModal() {
+  login = () => {
     this.setState({
-      showModal: true
-    });
+      isSignup: false
+    })
   }
-
-  closeModal() {
+  signup = () => {
+    console.log('isSignup')
     this.setState({
-      showModal: false,
-      error: null
-    });
+      isSignup: true
+    })
   }
-
-  onLoginSuccess(method, response) {
-    console.log("logged successfully with " + method);
+  loginSubmit = (e) => {
+    e.preventDefault()
+    console.log('submit')
+    const { uname, pw } = this.state
+    if (uname && pw) {
+      // if (uname === "jamuna@gmail.com" && pw === "1234") {
+      this.props.history.push(ROUTES.HOME)
+      // } else {
+      //   this.setState({
+      //     error: 'User name or password is wrong....'
+      //   })
+      // }
+    } else {
+      this.setState({
+        error: 'Please enter all the details...'
+      })
+    }
   }
-
-  onLoginFail(method, response) {
-    console.log("logging failed with " + method);
+  handleChange = (e) => {
+    const { target: { name, value } } = e
     this.setState({
-      error: response
-    });
+      [name]: value
+    })
   }
+  signupSubmit = (e) => {
+    e.preventDefault()
+    const { email, password, cpassword } = this.state
+    if (email && password && cpassword) {
 
-  startLoading() {
-    this.setState({
-      loading: true
-    });
+    }
   }
-
-  finishLoading() {
-    this.setState({
-      loading: false
-    });
-  }
-
-  afterTabsChange() {
-    this.setState({
-      error: null
-    });
-  }
-
   render() {
+    const { isSignup, uname, pw, error, email, password, cpassword } = this.state
     return (
-      <div>
-        <button onClick={() => this.openModal()}>Open Modal</button>
-        {/* <ReactModalLogin
-          visible={this.state.showModal}
-          onCloseModal={this.closeModal.bind(this)}
-          loading={this.state.loading}
-          error={this.state.error}
-          tabs={{
-            afterChange: this.afterTabsChange.bind(this)
-          }}
-          loginError={{
-            label: "Couldn't sign in, please try again."
-          }}
-          registerError={{
-            label: "Couldn't sign up, please try again."
-          }}
-          startLoading={this.startLoading.bind(this)}
-          finishLoading={this.finishLoading.bind(this)}
-        //   providers={{
-        //     facebook: {
-        //       config: facebookConfig,
-        //       onLoginSuccess: this.onLoginSuccess.bind(this),
-        //       onLoginFail: this.onLoginFail.bind(this),
-        //       label: "Continue with Facebook"
-        //     },
-        //     google: {
-        //       config: googleConfig,
-        //       onLoginSuccess: this.onLoginSuccess.bind(this),
-        //       onLoginFail: this.onLoginFail.bind(this),
-        //       label: "Continue with Google"
-        //     }
-        //   }}
-        /> */}
+      <div class="wrapper">
+        <div class="title-text">
+          <div class="title login" style={{ ...isSignup && { marginLeft: '-50%' } }}>Login Form</div>
+          <div class="title signup">Signup Form</div>
+        </div>
+        <div class="form-container">
+          <div class="slide-controls">
+            <input type="radio" name="slide" id="login" onClick={() => this.login()} />
+            <input type="radio" name="slide" id="signup" onClick={() => this.signup()} />
+            <label for="login" class="slide login">Login</label>
+            <label for="signup" class="slide signup">Signup</label>
+            <div class="slider-tab"></div>
+          </div>
+          <div class="form-inner">
+            <form class="login" style={{ ...isSignup && { marginLeft: '-50%' } }} onSubmit={(e) => this.loginSubmit(e)} >
+              <div class="field">
+                <input type="text" placeholder="Email Address" value={uname} name="uname" onChange={(e) => this.handleChange(e)} />
+              </div>
+              <div class="field">
+                <input type="password" placeholder="Password" value={pw} name="pw" onChange={(e) => this.handleChange(e)} />
+              </div>
+              <div class="pass-link"><a href="/forgot-password">Forgot password?</a></div>
+              <div class="field btn">
+                <div class="btn-layer"></div>
+                <input type="submit" />
+              </div>
+              <div class="error">{error}</div>
+              <div class="signup-link">Not a member? <a href="#">Signup now</a></div>
+            </form>
+            <form class="signup" onSubmit={(e) => this.signupSubmit()}>
+              <div class="field">
+                <input type="text" placeholder="Email Address" required name="email" value={email} onChange={(e) => this.handleChange(e)} />
+              </div>
+              <div class="field">
+                <input type="password" placeholder="Password" required name="password" value={password} onChange={(e) => this.handleChange(e)} />
+              </div>
+              <div class="field">
+                <input type="password" placeholder="Confirm password" required name="cpassword" value={cpassword} onChange={(e) => this.handleChange(e)} />
+              </div>
+              <div class="field btn">
+                <div class="btn-layer"></div>
+                <input type="submit" value="Signup" />
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
+
     );
   }
 }
+export default withRouter(Authentication)
