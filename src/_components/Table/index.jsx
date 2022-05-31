@@ -22,34 +22,33 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import { visuallyHidden } from '@mui/utils';
 
-function createData( any, any, any, any, any, any, any, any, any ) {
+function createData( name, price, UsualPrice, FinalPrice, Stock, product, fulfillment, additionalinfo ) {
   return {
-    any,
-    any,
-    any,
-    any, 
-    any,
-    any,
-    any,
-    any,
-    any
+    name,
+    price,
+    UsualPrice,
+    FinalPrice,
+    Stock,
+    product,
+    fulfillment,
+    additionalinfo
   };
 }
 
 const rows = [
-  createData(' Nithi Tex Woven Kanjivaram Art silk', 1999, 'NA', 1999, 5, 'Sari', 'Seller Only', 'View', 'Editing Listing'),
-  createData(' Nithi Tex Woven Kanjivaram Art silk', 1999, 'NA', 1999, 5, 'Sari', 'Seller Only', 'View', 'Editing Listing'),
-  createData(' Nithi Tex Woven Kanjivaram Art silk', 1999, 'NA', 1999, 5, 'Sari', 'Seller Only', 'View', 'Editing Listing'),
-  createData(' Nithi Tex Woven Kanjivaram Art silk', 1999, 'NA', 1999, 5, 'Sari', 'Seller Only', 'View', 'Editing Listing'),
-  createData(' Nithi Tex Woven Kanjivaram Art silk', 1999, 'NA', 1999, 5, 'Sari', 'Seller Only', 'View', 'Editing Listing'),
-  createData(' Nithi Tex Woven Kanjivaram Art silk', 1999, 'NA', 1999, 5, 'Sari', 'Seller Only', 'View', 'Editing Listing'),
-  createData(' Nithi Tex Woven Kanjivaram Art silk', 1999, 'NA', 1999, 5, 'Sari', 'Seller Only', 'View', 'Editing Listing'),
-  createData(' Nithi Tex Woven Kanjivaram Art silk', 1999, 'NA', 1999, 5, 'Sari', 'Seller Only', 'View', 'Editing Listing'),
-  createData(' Nithi Tex Woven Kanjivaram Art silk', 1999, 'NA', 1999, 5, 'Sari', 'Seller Only', 'View', 'Editing Listing'),
-  createData(' Nithi Tex Woven Kanjivaram Art silk', 1999, 'NA', 1999, 5, 'Sari', 'Seller Only', 'View', 'Editing Listing'),
-  createData(' Nithi Tex Woven Kanjivaram Art silk', 1999, 'NA', 1999, 5, 'Sari', 'Seller Only', 'View', 'Editing Listing'),
-  createData(' Nithi Tex Woven Kanjivaram Art silk', 1999, 'NA', 1999, 5, 'Sari', 'Seller Only', 'View', 'Editing Listing'),
-  createData(' Nithi Tex Woven Kanjivaram Art silk', 1999, 'NA', 1999, 5, 'Sari', 'Seller Only', 'View', 'Editing Listing'),
+  createData('NithiTex 1 kanjivaram silk', 1999, 1990, 1990, 3, 'Sari', 'Seller only', 'Edit list'),
+  createData('NithiTex 2 kanjivaram silk', 1999, 1990, 1990, 2, 'Sari', 'Seller only', 'Edit list'),
+  createData('NithiTex 3 kanjivaram silk', 1999, 1990, 1990, 1, 'Sari', 'Seller only', 'Edit list'),
+  createData('NithiTex 4 kanjivaram silk', 1999, 1990, 1990, 5, 'Sari', 'Seller only', 'Edit list'),
+  createData('NithiTex 5 kanjivaram silk', 1999, 1990, 1990, 9, 'Sari', 'Seller only', 'Edit list'),
+  createData('NithiTex 6 kanjivaram silk', 1999, 1990, 1990, 9, 'Sari', 'Seller only', 'Edit list'),
+  createData('NithiTex 7 kanjivaram silk', 1999, 1990, 1990, 4, 'Sari', 'Seller only', 'Edit list'),
+  createData('NithiTex 8 kanjivaram silk', 1999, 1990, 1990, 3, 'Sari', 'Seller only', 'Edit list'),
+  createData('NithiTex 9 kanjivaram silk', 1999, 1990, 1990, 7, 'Sari', 'Seller only', 'Edit list'),
+  createData('NithiTex 10 kanjivaram silk', 1999, 1990, 1990, 6, 'Sari', 'Seller only', 'Edit list'),
+  createData('NithiTex 11 kanjivaram silk', 1999, 1990, 1990, 7, 'Sari', 'Seller only', 'Edit list'),
+  createData('NithiTex 12 kanjivaram silk', 1999, 1990, 1990, 5, 'Sari', 'Seller only', 'Edit list'),
+  createData('NithiTex 13 kanjivaram silk', 1999, 1990, 1990, 7, 'Sari', 'Seller only', 'Edit list'),
 ];
 
 function descendingComparator(a, b, orderBy) {
@@ -84,58 +83,52 @@ function stableSort(array, comparator) {
 
 const headCells = [
   {
-    id: 'any',
+    id: 'name',
     numeric: false,
     disablePadding: true,
     label: 'Product Details',
   },
   {
-    id: 'any',
+    id: 'price',
     numeric: true,
     disablePadding: false,
     label: 'Listing Price',
   },
   {
-    id: 'any',
+    id: 'name',
     numeric: false,
     disablePadding: true,
-    label: 'Usual Price',
+    label: '   Usual Price',
   },
   {
-    id: 'any',
+    id: 'price',
     numeric: true,
     disablePadding: false,
     label: 'Final Price',
   },
   {
-    id: 'any',
+    id: 'price',
     numeric: true,
     disablePadding: false,
     label: 'Stock',
   },
   {
-    id:'any',
-    numeric: false,
-    disablePadding: true,
+    id:'product',
+    numeric: true,
+    disablePadding: false,
     label: 'Category',
   },
   {
-    id:'any',
-    numeric: false,
-    disablePadding: true,
+    id:'Fulfillment',
+    numeric: true,
+    disablePadding: false,
     label: 'Fulfillment',
   },
   {
-    id:'any',
-    numeric: false,
-    disablePadding: true,
+    id:'additional info',
+    numeric: true,
+    disablePadding: false,
     label: 'Additional Info',
-  },
-  {
-    id:'any',
-    numeric: false,
-    disablePadding: true,
-    label: 'Action',
   }
 ];
 
@@ -156,7 +149,7 @@ function EnhancedTableHead(props) {
             checked={rowCount > 0 && numSelected === rowCount}
             onChange={onSelectAllClick}
             inputProps={{
-              'aria-label': 'select all listing',
+              'aria-label': 'select all desserts',
             }}
           />
         </TableCell>
@@ -314,7 +307,7 @@ export default function EnhancedTable() {
         <EnhancedTableToolbar numSelected={selected.length} />
         <TableContainer>
           <Table
-            sx={{ minWidth: 750 }}
+            sx={{ minWidth: 900}}
             aria-labelledby="tableTitle"
             size={dense ? 'small' : 'medium'}
           >
@@ -362,14 +355,13 @@ export default function EnhancedTable() {
                       >
                         {row.name}
                       </TableCell>
-                      <TableCell align="right">{row.any}</TableCell>
-                      <TableCell align="right">{row.any}</TableCell>
-                      <TableCell align="right">{row.any}</TableCell>
-                      <TableCell align="right">{row.any}</TableCell>
-                      <TableCell align="right">{row.any}</TableCell>
-                      <TableCell align="right">{row.any}</TableCell>
-                      <TableCell align="right">{row.any}</TableCell>
-                      <TableCell align="right">{row.any}</TableCell>
+                      <TableCell align="right">{row.price}</TableCell>
+                      <TableCell align="right">{row.UsualPrice}</TableCell>
+                      <TableCell align="right">{row.FinalPrice}</TableCell>
+                      <TableCell align="right">{row.Stock}</TableCell>
+                      <TableCell align="right">{row.product}</TableCell>
+                      <TableCell align="right">{row.fulfillment}</TableCell>
+                      <TableCell align="right">{row.additionalinfo}</TableCell>
                     </TableRow>
                   );
                 })}
