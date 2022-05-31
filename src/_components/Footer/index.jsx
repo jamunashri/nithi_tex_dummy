@@ -11,7 +11,7 @@ class Footer extends React.Component {
         return (
             <React.Fragment>
                 <div className='footer'>
-                    Copyright 2022 by Nithi Tex. All Rights Reserved.
+                    Copyright 2022 by Nithi Tex Woven Kanjivaram Art silk. All Rights Reserved.
                 </div>
             </React.Fragment>
         )
