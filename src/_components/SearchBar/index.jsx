@@ -15,6 +15,7 @@ export default function SearchBox() {
           type="text"
           name="q"
           id="q"
+          className='search-input'
           onChange={(e) => setName(e.target.value)}
         ></input>
         <button className="primary" type="submit">

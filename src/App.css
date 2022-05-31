@@ -2,7 +2,7 @@
   text-align: center;
 }
 body {
-  background: -webkit-linear-gradient(left, #003366,#004080,#0059b3 , #0073e6);
+  background: -webkit-linear-gradient(left, #003366, #004080, #0059b3, #0073e6);
 }
 .App-logo {
   height: 40vmin;
@@ -42,9 +42,9 @@ body {
 .grid-container {
   display: grid;
   grid-template-areas:
-    'header'
-    'main'
-    'footer';
+    "header"
+    "main"
+    "footer";
   grid-template-columns: 1fr;
   grid-template-rows: 5rem 1fr 5rem;
   height: 100%;
@@ -93,7 +93,7 @@ button {
   padding: 1rem;
   border-radius: 0.5rem;
   border: 0.1rem #a4a4a4 solid;
-  font-size: 1.6rem;
+  font-size: 1rem;
   font-family: Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

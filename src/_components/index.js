@@ -4,11 +4,13 @@ import Button from './Button'
 import Header from './Header'
 import Footer from './Footer'
 import SearchBox  from "./SearchBar";
+import MuiTable from './Table'
 export {
     Dropdown,
     Navbar,
     Button,
     Header,
     Footer,
-    SearchBox
+    SearchBox,
+    MuiTable
 }
