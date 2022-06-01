@@ -93,6 +93,12 @@
       width: 100%;
       display: table;
     }
+    .nav-links {
+      text-align: center;
+      padding: 2rem;
+      width: 100%;
+      display: group;
+    }
   
     .nav-links:hover {
       background-color: #1888ff;

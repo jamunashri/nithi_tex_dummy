@@ -1,10 +1,11 @@
 import Dropdown from "./Dropdown";
 import Navbar from "./Navbar";
-import Button from './Button'
-import Header from './Header'
-import Footer from './Footer'
+import Button from './Button';
+import Header from './Header';
+import Footer from './Footer';
 import SearchBox  from "./SearchBar";
-import MuiTable from './Table'
+import MuiTable from './Table';
+import Group from './Group'
 export {
     Dropdown,
     Navbar,
@@ -12,5 +13,6 @@ export {
     Header,
     Footer,
     SearchBox,
-    MuiTable
+    MuiTable,
+    Group
 }
