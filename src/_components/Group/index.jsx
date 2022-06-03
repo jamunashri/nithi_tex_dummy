@@ -4,6 +4,7 @@ import MenuItem from '@mui/material/MenuItem';
 import ListSubheader from '@mui/material/ListSubheader';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import './index.css';
 
 export default function GroupedSelect() {
   return (
@@ -38,7 +39,7 @@ export default function GroupedSelect() {
         <InputLabel htmlFor="grouped-native-select">Category</InputLabel>
         <Select native defaultValue="" id="grouped-native-select" label="Grouping">
           <option aria-label="None" value="" />
-          <optgroup label="Search">
+          <optgroup label="Category">
             <option value={1}>Clothing</option>
             <option value={2}>other product</option>
           </optgroup>
@@ -49,7 +50,7 @@ export default function GroupedSelect() {
         <InputLabel htmlFor="grouped-native-select">Brand</InputLabel>
         <Select native defaultValue="" id="grouped-native-select" label="Grouping">
           <option aria-label="None" value="" />
-          <optgroup label="Search">
+          <optgroup label="Brand">
             <option value={1}>NithiTex</option>
             </optgroup>
         </Select>
@@ -58,7 +59,8 @@ export default function GroupedSelect() {
         <InputLabel htmlFor="grouped-native-select">Listing Price</InputLabel>
         <Select native defaultValue="" id="grouped-native-select" label="Grouping">
           <option aria-label="None" value="" />
-          <optgroup label="Price Bar">
+          <optgroup label="Listing Price">
+            <option value={1}>0-2000</option>
           </optgroup>
         </Select>
       </FormControl>
@@ -66,9 +68,9 @@ export default function GroupedSelect() {
         <InputLabel htmlFor="grouped-native-select">NTAssured</InputLabel>
         <Select native defaultValue="" id="grouped-native-select" label="Grouping">
           <option aria-label="None" value="" />
-          <optgroup label="NTAssursed">
-          </optgroup>
-          <optgroup label="Non NTAssursed">
+          <optgroup label="NithiTex">
+         <option value={1}>Assured</option>
+         <option value={2}>NonAssured</option>
           </optgroup>
         </Select>
       </FormControl>
@@ -76,11 +78,10 @@ export default function GroupedSelect() {
         <InputLabel htmlFor="grouped-native-select">Fulfillment</InputLabel>
         <Select native defaultValue="" id="grouped-native-select" label="Grouping">
           <option aria-label="None" value="" />
-          <optgroup label="Seller Only">
-          </optgroup>
-          <optgroup label="NithiTex Only">
-          </optgroup>
-          <optgroup label="Smart Only">
+          <optgroup label="Fulfillment">
+            <option value={1}>Seller Only</option>
+            <option value={1}>NithiTex Only</option>
+            <option value={1}>Smart Only</option>
           </optgroup>
         </Select>
       </FormControl>
@@ -89,6 +90,10 @@ export default function GroupedSelect() {
         <Select native defaultValue="" id="grouped-native-select" label="Grouping">
           <option aria-label="None" value="" />
           <optgroup label="Stock Bar">
+          <option value={1}>1</option>
+          <option value={1}>2</option>
+          <option value={1}>3</option>
+          <option value={1}>More</option>
           </optgroup>
         </Select>
       </FormControl>
@@ -96,24 +101,20 @@ export default function GroupedSelect() {
         <InputLabel htmlFor="grouped-native-select">Size Chart</InputLabel>
         <Select native defaultValue="" id="grouped-native-select" label="Grouping">
           <option aria-label="None" value="" />
-          <optgroup label="Avaiable">
+          <optgroup label="Size Chart">
+          <option value={1}>Avaiable</option>
+          <option value={2}>Not Avaiable</option>
+          <option value={3}>In Progress</option>
           </optgroup>
-          <optgroup label="Not Avaiable">
-         </optgroup>
-         <optgroup label="In Progress">
-         </optgroup>
         </Select>
       </FormControl><FormControl sx={{ m: 1, minWidth: 120 }}>
         <InputLabel htmlFor="grouped-native-select">Procurement Type</InputLabel>
         <Select native defaultValue="" id="grouped-native-select" label="Grouping">
           <option aria-label="None" value="" />
-          <optgroup label="Express">
-          </optgroup>
-          <optgroup label="Regular">
-          </optgroup>
-          <optgroup label="International">
-          </optgroup>
-          <optgroup label="Made to Order">
+          <optgroup label="Procurement Type">
+          <option value={1}>Regular</option>
+          <option value={1}>International</option>
+          <option value={1}>Made to Order</option>
          </optgroup>
         </Select>
       </FormControl>

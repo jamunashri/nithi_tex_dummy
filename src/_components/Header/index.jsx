@@ -19,7 +19,7 @@ class Header extends React.Component {
               className="open-sidebar"
               onClick={() => this.setState({ sideBarIsOpen: true })}
             >
-              <i className="fa fa-bars"></i>
+             <i className="fa fa-bars"></i>
             </button>
             <Link className="brand" to="/">
               NithiTex
