@@ -21,6 +21,7 @@ import Switch from '@mui/material/Switch';
 import DeleteIcon from '@mui/icons-material/Delete';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import { visuallyHidden } from '@mui/utils';
+import './index.css';
 
 function createData( name, price, UsualPrice, FinalPrice, Stock, product, fulfillment, additionalinfo ) {
   return {

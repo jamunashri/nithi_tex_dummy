@@ -8,11 +8,11 @@ import './index.css';
 
 export default function GroupedSelect() {
   return (
-    <div>
+    <div class name="app-container">
       <FormControl sx={{ m: 1, minWidth: 120 }}>
         <InputLabel htmlFor="grouped-native-select">Bulk Action</InputLabel>
         <Select native defaultValue="" id="grouped-native-select" label="Grouping">
-          <option aria-label="None" value="" />
+          <option aria-label="absolute" value="" />
           <optgroup label="Listing">
             <option value={1}>Archive Listings</option>
             <option value={2}>Deactivate Listings</option>
@@ -24,13 +24,14 @@ export default function GroupedSelect() {
         </Select>
       </FormControl>
       <FormControl sx={{ m: 1, minWidth: 120 }}>
-        <InputLabel htmlFor="grouped-select">Request Download</InputLabel>
-        <Select defaultValue="" id="grouped-select" label="Grouping">
-          <MenuItem value="">
-          </MenuItem>
-          <ListSubheader>Listing File</ListSubheader>
-          <ListSubheader>Catalog File</ListSubheader>
-          </Select>
+        <InputLabel htmlFor="grouped-native-select">Request Download</InputLabel>
+        <Select native defaultValue="" id="grouped-native-select" label="Grouping">
+          <option aria-label="None" value="" />
+          <optgroup label="Request Download">
+            <option value={1}>Listing File</option>
+            <option value={2}>Catalog File</option>
+          </optgroup>         
+        </Select>
       </FormControl>
 
       {/* //add extra grroup for more options// */}
