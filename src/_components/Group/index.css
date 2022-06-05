@@ -11,7 +11,7 @@
         height: 1.4375em;
         margin: 0;
         -webkit-tap-highlight-color: transparent;
-        display: block;
+        display: flexbox;
         min-width: 0;
         width: 100%;
         -webkit-animation-name: mui-auto-fill-cancel;

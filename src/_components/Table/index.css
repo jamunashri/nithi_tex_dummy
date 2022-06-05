@@ -9,6 +9,7 @@
     -ms-flex: 1 1 100%;
     flex: 1 1 100%;
     background-color:white;
+    display: list-item;
 }
 * {
     margin: 0;
@@ -18,5 +19,5 @@
 }
 user agent stylesheet
 div {
-    display: block;
+    display: table-caption;
 }
