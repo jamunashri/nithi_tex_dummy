@@ -37,19 +37,19 @@ function createData( name, price, UsualPrice, FinalPrice, Stock, product, fulfil
 }
 
 const rows = [
-  createData('NithiTex 1 kanjivaram silk', 1999, 1990, 1990, 013, 'Sari', 'Seller only', 'Edit list'),
-  createData('NithiTex 2 kanjivaram silk', 1999, 1990, 1990, 2, 'Sari', 'Seller only', 'Edit list'),
-  createData('NithiTex 3 kanjivaram silk', 1999, 1990, 1990, 1, 'Sari', 'Seller only', 'Edit list'),
-  createData('NithiTex 4 kanjivaram silk', 1999, 1990, 1990, 5, 'Sari', 'Seller only', 'Edit list'),
-  createData('NithiTex 5 kanjivaram silk', 1999, 1990, 1990, 9, 'Sari', 'Seller only', 'Edit list'),
-  createData('NithiTex 6 kanjivaram silk', 1999, 1990, 1990, 9, 'Sari', 'Seller only', 'Edit list'),
-  createData('NithiTex 7 kanjivaram silk', 1999, 1990, 1990, 4, 'Sari', 'Seller only', 'Edit list'),
-  createData('NithiTex 8 kanjivaram silk', 1999, 1990, 1990, 3, 'Sari', 'Seller only', 'Edit list'),
-  createData('NithiTex 9 kanjivaram silk', 1999, 1990, 1990, 7, 'Sari', 'Seller only', 'Edit list'),
-  createData('NithiTex 10 kanjivaram silk', 1999, 1990, 1990, 6, 'Sari', 'Seller only', 'Edit list'),
-  createData('NithiTex 11 kanjivaram silk', 1999, 1990, 1990, 7, 'Sari', 'Seller only', 'Edit list'),
-  createData('NithiTex 12 kanjivaram silk', 1999, 1990, 1990, 5, 'Sari', 'Seller only', 'Edit list'),
-  createData('NithiTex 13 kanjivaram silk', 1999, 1990, 1990, 7, 'Sari', 'Seller only', 'Edit list'),
+  createData('NithiTex 1 kanjivaram silk', 1999, 1990, 1990, 1, 'Saree', 'Seller only', 'Edit list'),
+  createData('NithiTex 2 kanjivaram silk', 1999, 1990, 1990, 2, 'Saree', 'Seller only', 'Edit list'),
+  createData('NithiTex 3 kanjivaram silk', 1999, 1990, 1990, 1, 'Saree', 'Seller only', 'Edit list'),
+  createData('NithiTex 4 kanjivaram silk', 1999, 1990, 1990, 5, 'Saree', 'Seller only', 'Edit list'),
+  createData('NithiTex 5 kanjivaram silk', 1999, 1990, 1990, 9, 'Saree', 'Seller only', 'Edit list'),
+  createData('NithiTex 6 kanjivaram silk', 1999, 1990, 1990, 9, 'Saree', 'Seller only', 'Edit list'),
+  createData('NithiTex 7 kanjivaram silk', 1999, 1990, 1990, 4, 'Saree', 'Seller only', 'Edit list'),
+  createData('NithiTex 8 kanjivaram silk', 1999, 1990, 1990, 3, 'Saree', 'Seller only', 'Edit list'),
+  createData('NithiTex 9 kanjivaram silk', 1999, 1990, 1990, 7, 'Saree', 'Seller only', 'Edit list'),
+  createData('NithiTex 10 kanjivaram silk', 1999, 1990, 1990, 6, 'Saree', 'Seller only', 'Edit list'),
+  createData('NithiTex 11 kanjivaram silk', 1999, 1990, 1990, 7, 'Pattu Pavaadai', 'Seller only', 'Edit list'),
+  createData('NithiTex 12 kanjivaram silk', 1999, 1990, 1990, 5, 'Pattu Pavaadai', 'Seller only', 'Edit list'),
+  createData('NithiTex 13 kanjivaram silk', 1999, 1990, 1990, 7, 'Pattu Pavaadai', 'Seller only', 'Edit list'),
 ];
 
 function descendingComparator(a, b, orderBy) {
