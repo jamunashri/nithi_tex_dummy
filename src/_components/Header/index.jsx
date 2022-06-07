@@ -23,21 +23,21 @@ this.setState({
             <div class="row row1">
               <ul class="largenav pull-right">
                 <li class="upper-links">
+                  <a class="links" href="https://www.facebook.com/nithitexsarees/">
+                    Facebook
+                  </a>
+                </li>
+                <li class="upper-links">
+                  <a class="links" href="https://www.instagram.com/p/CRRggBclpHs/">
+                    Instagram
+                  </a>
+                </li>
+                {/* <li class="upper-links">
                   <a class="links" href="http://clashhacks.in/">
-                    Link 1
+                   Whatsapp
                   </a>
-                </li>
-                <li class="upper-links">
-                  <a class="links" href="https://campusbox.org/">
-                    Link 2
-                  </a>
-                </li>
-                <li class="upper-links">
-                  <a class="links" href="http://clashhacks.in/">
-                    Link 3
-                  </a>
-                </li>
-                <li class="upper-links">
+                </li> */}
+                {/* <li class="upper-links">
                   <a class="links" href="http://clashhacks.in/">
                     Link 4
                   </a>
@@ -51,9 +51,9 @@ this.setState({
                   <a class="links" href="http://clashhacks.in/">
                     Link 6
                   </a>
-                </li>
+                </li> */}
                 <li class="upper-links">
-                  <a class="links" href="http://clashhacks.in/">
+                  <a class="links" href="/notification">
                     <svg
                       class=""
                       width="16px"
@@ -69,20 +69,20 @@ this.setState({
                 </li>
                 <li class="upper-links dropdown">
                   <a class="links" href="http://clashhacks.in/">
-                    Dropdown
+                    Brands
                   </a>
                   <ul class="dropdown-menu">
                     <li class="profile-li">
-                      <a class="profile-links" href="http://yazilife.com/">
-                        Link
+                      <a class="profile-links" href="/home">
+                        Product Listing
                       </a>
                     </li>
                     <li class="profile-li">
-                      <a class="profile-links" href="http://hacksociety.tech/">
-                        Link
+                      <a class="profile-links" href="/payment">
+                        Payment
                       </a>
                     </li>
-                    <li class="profile-li">
+                    {/* <li class="profile-li">
                       <a class="profile-links" href="http://clashhacks.in/">
                         Link
                       </a>
@@ -106,7 +106,7 @@ this.setState({
                       <a class="profile-links" href="http://clashhacks.in/">
                         Link
                       </a>
-                    </li>
+                    </li> */}
                   </ul>
                 </li>
               </ul>
@@ -115,20 +115,23 @@ this.setState({
               <div class="col-sm-2">
                 <h2 style={{margin:"0px"}}>
                   <span class="smallnav menu" onclick={() => this.openNav()}>
-                    ☰ Brand
+                    ☰ <img src={require('../../assets/img/fg.jpg')} alt="NithiTex"/>
                   </span>
                 </h2>
                 <h1 style={{margin:"0px"}}>
-                  <span class="largenav">Brand</span>
+                  <span class="largenav"><img src={require('../../assets/img/fg.jpg')} alt="NithiTex" style={{    width: '72px',
+    marginTop: '-31px'
+}}/></span>
                 </h1>
               </div>
               <div class="flipkart-navbar-search smallsearch col-sm-8 col-xs-11">
                 <div class="row">
                   <input
                     class="flipkart-navbar-input col-xs-11"
-                    type=""
+                    type="text"
                     placeholder="Search for Products, Brands and more"
-                    name=""
+                    name="search"
+                    value=""
                   />
                   <button class="flipkart-navbar-button col-xs-1">
                     <svg width="15px" height="15px">
@@ -138,7 +141,7 @@ this.setState({
                 </div>
               </div>
               <div class="cart largenav col-sm-2">
-                <a class="cart-button">
+                <a class="cart-button" href='/'>
                   <svg
                     class="cart-svg "
                     width="16 "
@@ -150,8 +153,8 @@ this.setState({
                       fill="#fff "
                     ></path>
                   </svg>{" "}
-                  Link
-                  <span class="item-number ">0</span>
+                Login
+                  {/* <span class="item-number ">0</span> */}
                 </a>
               </div>
             </div>
