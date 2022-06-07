@@ -31,13 +31,13 @@ class Authentication extends Component {
     console.log('submit')
     const { uname, pw } = this.state
     if (uname && pw) {
-      // if (uname === "jamuna@gmail.com" && pw === "1234") {
+      if (uname === "admin@gmail.com" && pw === "admin") {
       this.props.history.push(ROUTES.HOME)
-      // } else {
-      //   this.setState({
-      //     error: 'User name or password is wrong....'
-      //   })
-      // }
+      } else {
+        this.setState({
+          error: 'User name or password is wrong....'
+        })
+      }
     } else {
       this.setState({
         error: 'Please enter all the details...'
