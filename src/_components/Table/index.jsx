@@ -37,7 +37,7 @@ function createData( name, price, UsualPrice, FinalPrice, Stock, product, fulfil
 }
 
 const rows = [
-  createData('NithiTex 1 kanjivaram silk', 1999, 1990, 1990, 013, 'Sari', 'Seller only', 'Edit list'),
+  createData('NithiTex 1 kanjivaram silk', 1999, 1990, 1990, 3, 'Sari', 'Seller only', 'Edit list'),
   createData('NithiTex 2 kanjivaram silk', 1999, 1990, 1990, 2, 'Sari', 'Seller only', 'Edit list'),
   createData('NithiTex 3 kanjivaram silk', 1999, 1990, 1990, 1, 'Sari', 'Seller only', 'Edit list'),
   createData('NithiTex 4 kanjivaram silk', 1999, 1990, 1990, 5, 'Sari', 'Seller only', 'Edit list'),
