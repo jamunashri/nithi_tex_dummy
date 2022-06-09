@@ -22,7 +22,6 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import { visuallyHidden } from '@mui/utils';
 import './index.css';
-
 function createData( name, price, UsualPrice, FinalPrice, Stock, product, fulfillment, additionalinfo ) {
   return {
     name,
@@ -37,183 +36,168 @@ function createData( name, price, UsualPrice, FinalPrice, Stock, product, fulfil
 }
 
 const rows = [
-  createData('NithiTex 1 kanjivaram silk', 1999, 1990, 1990, 3, 'Sari', 'Seller only', 'Edit list'),
-  createData('NithiTex 2 kanjivaram silk', 1999, 1990, 1990, 2, 'Sari', 'Seller only', 'Edit list'),
-  createData('NithiTex 3 kanjivaram silk', 1999, 1990, 1990, 1, 'Sari', 'Seller only', 'Edit list'),
-  createData('NithiTex 4 kanjivaram silk', 1999, 1990, 1990, 5, 'Sari', 'Seller only', 'Edit list'),
-  createData('NithiTex 5 kanjivaram silk', 1999, 1990, 1990, 9, 'Sari', 'Seller only', 'Edit list'),
-  createData('NithiTex 6 kanjivaram silk', 1999, 1990, 1990, 9, 'Sari', 'Seller only', 'Edit list'),
-  createData('NithiTex 7 kanjivaram silk', 1999, 1990, 1990, 4, 'Sari', 'Seller only', 'Edit list'),
-  createData('NithiTex 8 kanjivaram silk', 1999, 1990, 1990, 3, 'Sari', 'Seller only', 'Edit list'),
-  createData('NithiTex 9 kanjivaram silk', 1999, 1990, 1990, 7, 'Sari', 'Seller only', 'Edit list'),
-  createData('NithiTex 10 kanjivaram silk', 1999, 1990, 1990, 6, 'Sari', 'Seller only', 'Edit list'),
-  createData('NithiTex 11 kanjivaram silk', 1999, 1990, 1990, 7, 'Sari', 'Seller only', 'Edit list'),
-  createData('NithiTex 12 kanjivaram silk', 1999, 1990, 1990, 5, 'Sari', 'Seller only', 'Edit list'),
-  createData('NithiTex 13 kanjivaram silk', 1999, 1990, 1990, 7, 'Sari', 'Seller only', 'Edit list'),
+  createData('NithiTex 1 kanjivaram silk', 1999, 1990, 1990, 1, 'Saree', 'Seller only', 'Edit list'),
+  createData('NithiTex 2 kanjivaram silk', 1999, 1990, 1990, 2, 'Saree', 'Seller only', 'Edit list'),
+  createData('NithiTex 3 kanjivaram silk', 1999, 1990, 1990, 1, 'Saree', 'Seller only', 'Edit list'),
+  createData('NithiTex 4 kanjivaram silk', 1999, 1990, 1990, 5, 'Saree', 'Seller only', 'Edit list'),
+  createData('NithiTex 5 kanjivaram silk', 1999, 1990, 1990, 9, 'Saree', 'Seller only', 'Edit list'),
+  createData('NithiTex 6 kanjivaram silk', 1999, 1990, 1990, 9, 'Saree', 'Seller only', 'Edit list'),
+  createData('NithiTex 7 kanjivaram silk', 1999, 1990, 1990, 4, 'Saree', 'Seller only', 'Edit list'),
+  createData('NithiTex 8 kanjivaram silk', 1999, 1990, 1990, 3, 'Saree', 'Seller only', 'Edit list'),
+  createData('NithiTex 9 kanjivaram silk', 1999, 1990, 1990, 7, 'Saree', 'Seller only', 'Edit list'),
+  createData('NithiTex 10 kanjivaram silk', 1999, 1990, 1990, 6, 'Saree', 'Seller only', 'Edit list'),
+  createData('NithiTex 11 kanjivaram silk', 1999, 1990, 1990, 7, 'Pattu Pavaadai', 'Seller only', 'Edit list'),
+  createData('NithiTex 12 kanjivaram silk', 1999, 1990, 1990, 5, 'Pattu Pavaadai', 'Seller only', 'Edit list'),
+  createData('NithiTex 13 kanjivaram silk', 1999, 1990, 1990, 7, 'Pattu Pavaadai', 'Seller only', 'Edit list'),
 ];
 
-function descendingComparator(a, b, orderBy) {
-  if (b[orderBy] < a[orderBy]) {
-    return -1;
-  }
-  if (b[orderBy] > a[orderBy]) {
-    return 1;
-  }
-  return 0;
+function descendingComparator(a, b, orderBy) { if (b[orderBy] < a[orderBy]) {
+  return -1;
 }
-
+if (b[orderBy] > a[orderBy]) {
+  return 1;
+}
+return 0;
+}
 function getComparator(order, orderBy) {
-  return order === 'desc'
-    ? (a, b) => descendingComparator(a, b, orderBy)
-    : (a, b) => -descendingComparator(a, b, orderBy);
+return order === 'desc'
+  ? (a, b) => descendingComparator(a, b, orderBy)
+  : (a, b) => -descendingComparator(a, b, orderBy);
 }
-
 // This method is created for cross-browser compatibility, if you don't
 // need to support IE11, you can use Array.prototype.sort() directly
 function stableSort(array, comparator) {
-  const stabilizedThis = array.map((el, index) => [el, index]);
-  stabilizedThis.sort((a, b) => {
-    const order = comparator(a[0], b[0]);
-    if (order !== 0) {
-      return order;
-    }
-    return a[1] - b[1];
-  });
-  return stabilizedThis.map((el) => el[0]);
-}
-
-const headCells = [
-  {
-    id: 'name',
-    numeric: false,
-    disablePadding: true,
-    label: 'Product Details',
-  },
-  {
-    id: 'price',
-    numeric: true,
-    disablePadding: false,
-    label: 'Listing Price',
-  },
-  {
-    id: 'name',
-    numeric: false,
-    disablePadding: true,
-    label: '   Usual Price',
-  },
-  {
-    id: 'price',
-    numeric: true,
-    disablePadding: false,
-    label: 'Final Price',
-  },
-  {
-    id: 'price',
-    numeric: true,
-    disablePadding: false,
-    label: 'Stock',
-  },
-  {
-    id:'product',
-    numeric: true,
-    disablePadding: false,
-    label: 'Category',
-  },
-  {
-    id:'Fulfillment',
-    numeric: true,
-    disablePadding: false,
-    label: 'Fulfillment',
-  },
-  {
-    id:'additional info',
-    numeric: true,
-    disablePadding: false,
-    label: 'Additional Info',
+const stabilizedThis = array.map((el, index) => [el, index]);
+stabilizedThis.sort((a, b) => { const order = comparator(a[0], b[0]);
+  if (order !== 0) {
+    return order;
   }
-];
-
-function EnhancedTableHead(props) {
-  const { onSelectAllClick, order, orderBy, numSelected, rowCount, onRequestSort } =
-    props;
-  const createSortHandler = (property) => (event) => {
-    onRequestSort(event, property);
-  };
-
-  return (
-    <TableHead>
-      <TableRow>
-        <TableCell padding="checkbox">
-          <Checkbox
-            color="primary"
-            indeterminate={numSelected > 0 && numSelected < rowCount}
-            checked={rowCount > 0 && numSelected === rowCount}
-            onChange={onSelectAllClick}
-            
-            inputProps={{
-              'aria-label': 'select all desserts',
-            }}
-          />
-        </TableCell>
-        {headCells.map((headCell) => (
-          <TableCell
-            key={headCell.id}
-            align={headCell.numeric ? 'right' : 'left'}
-            padding={headCell.disablePadding ? 'none' : 'normal'}
-            sortDirection={orderBy === headCell.id ? order : false}
-          >
-            <TableSortLabel
-              active={orderBy === headCell.id}
-              direction={orderBy === headCell.id ? order : 'asc'}
-              onClick={createSortHandler(headCell.id)}
-            >
-              {headCell.label}
-              {orderBy === headCell.id ? (
-                <Box component="span" sx={visuallyHidden}>
-                  {order === 'desc' ? 'sorted descending' : 'sorted ascending'}
-                </Box>
-              ) : null}
-            </TableSortLabel>
-          </TableCell>
-        ))}
-      </TableRow>
-    </TableHead>
-  );
+  return a[1] - b[1];
+});
+return stabilizedThis.map((el) => el[0]);
 }
-
-EnhancedTableHead.propTypes = {
-  numSelected: PropTypes.number.isRequired,
-  onRequestSort: PropTypes.func.isRequired,
-  onSelectAllClick: PropTypes.func.isRequired,
-  order: PropTypes.oneOf(['asc', 'desc']).isRequired,
-  orderBy: PropTypes.string.isRequired,
-  rowCount: PropTypes.number.isRequired,
+const headCells = [
+{
+  id: 'name',
+  numeric: false,
+  disablePadding: true,
+  label: 'Product Details',
+},
+{
+  id: 'price',
+  numeric: true,
+  disablePadding: false,label: 'Listing Price',
+},
+{
+  id: 'name',
+  numeric: false,
+  disablePadding: true,
+  label: '   Usual Price',
+},
+{
+  id: 'price',
+  numeric: true,
+  disablePadding: false,
+  label: 'Final Price',
+},
+{
+  id: 'price',
+  numeric: true,
+  disablePadding: false,
+  label: 'Stock',
+},
+{
+  id:'product',
+  numeric: true,
+  disablePadding: false,
+  label: 'Category',
+},
+{
+  id:'Fulfillment',
+  numeric: true,
+  disablePadding: false,
+  label: 'Fulfillment',
+},
+{
+  id:'additional info',
+  numeric: true,
+  disablePadding: false,
+  label: 'Additional Info',
+}
+];
+function EnhancedTableHead(props) {
+const { onSelectAllClick, order, orderBy, numSelected, rowCount, onRequestSort } =
+  props;
+const createSortHandler = (property) => (event) => {
+  onRequestSort(event, property);
 };
-
-const EnhancedTableToolbar = (props) => {
-  const { numSelected } = props;
-
-  return (
-    <Toolbar
-      sx={{
-        pl: { sm: 2 },
-        pr: { xs: 1, sm: 1 },
-        ...(numSelected > 0 && {
-          bgcolor: (theme) =>
-            alpha(theme.palette.primary.main, theme.palette.action.activatedOpacity),
-        }),
-      }}
-    >
-      {numSelected > 0 ? (
-        <Typography
-          sx={{ flex: '1 1 100%' }}
-          color="inherit"
-          variant="subtitle1"
-          component="div"
-        >
-          {numSelected} selected
-        </Typography>
-      ) : (
+return (
+  <TableHead>
+    <TableRow>
+      <TableCell padding="checkbox">
+        <Checkbox
+          color="primary"
+          indeterminate={numSelected > 0 && numSelected < rowCount}
+          checked={rowCount > 0 && numSelected === rowCount}
+          onChange={onSelectAllClick}
+          
+          inputProps={{
+            'aria-label': 'select all desserts',
+          }} />
+          </TableCell>
+          {headCells.map((headCell) => (
+            <TableCell
+              key={headCell.id}
+              align={headCell.numeric ? 'right' : 'left'}
+              padding={headCell.disablePadding ? 'none' : 'normal'}
+              sortDirection={orderBy === headCell.id ? order : false}
+            >
+              <TableSortLabel
+                active={orderBy === headCell.id}
+                direction={orderBy === headCell.id ? order : 'asc'}
+                onClick={createSortHandler(headCell.id)}
+              >
+                {headCell.label}
+                {orderBy === headCell.id ? (
+                  <Box component="span" sx={visuallyHidden}>
+                    {order === 'desc' ? 'sorted descending' : 'sorted ascending'}
+                  </Box>
+                ) : null}  </TableSortLabel>
+                </TableCell>
+              ))}
+            </TableRow>
+          </TableHead>
+        );
+      }
+      EnhancedTableHead.propTypes = {
+        numSelected: PropTypes.number.isRequired,
+        onRequestSort: PropTypes.func.isRequired,
+        onSelectAllClick: PropTypes.func.isRequired,
+        order: PropTypes.oneOf(['asc', 'desc']).isRequired,
+        orderBy: PropTypes.string.isRequired,
+        rowCount: PropTypes.number.isRequired,
+      };
+      const EnhancedTableToolbar = (props) => {
+        const { numSelected } = props;return (
+          <Toolbar
+            sx={{
+              pl: { sm: 2 },
+              pr: { xs: 1, sm: 1 },
+              ...(numSelected > 0 && {
+                bgcolor: (theme) =>
+                  alpha(theme.palette.primary.main, theme.palette.action.activatedOpacity),
+              }),
+            }}
+          >
+            {numSelected > 0 ? (
+              <Typography
+                sx={{ flex: '1 1 100%' }}
+                color="inherit"
+                variant="subtitle1"
+                component="div"
+              >
+                {numSelected} selected
+              </Typography>  ) : (
         <Typography
           sx={{ flex: '1 1 100%' }}
           variant="h6"
@@ -223,7 +207,6 @@ const EnhancedTableToolbar = (props) => {
           Listing Management
         </Typography>
       )}
-
       {numSelected > 0 ? (
         <Tooltip title="Delete">
           <IconButton>
@@ -232,33 +215,26 @@ const EnhancedTableToolbar = (props) => {
         </Tooltip>
       ) : (
         <Tooltip title="Filter list">
-          <IconButton>
-            <FilterListIcon />
-          </IconButton>
-        </Tooltip>
+          <IconButton />
+          </Tooltip>
       )}
     </Toolbar>
   );
 };
-
 EnhancedTableToolbar.propTypes = {
   numSelected: PropTypes.number.isRequired,
 };
-
 export default function EnhancedTable() {
   const [order, setOrder] = React.useState('asc');
   const [orderBy, setOrderBy] = React.useState('calories');
   const [selected, setSelected] = React.useState([]);
   const [page, setPage] = React.useState(0);
   const [dense, setDense] = React.useState(false);
-  const [rowsPerPage, setRowsPerPage] = React.useState(5);
-
-  const handleRequestSort = (event, property) => {
+  const [rowsPerPage, setRowsPerPage] = React.useState(5);  const handleRequestSort = (event, property) => {
     const isAsc = orderBy === property && order === 'asc';
     setOrder(isAsc ? 'desc' : 'asc');
     setOrderBy(property);
   };
-
   const handleSelectAllClick = (event) => {
     if (event.target.checked) {
       const newSelecteds = rows.map((n) => n.name);
@@ -267,13 +243,10 @@ export default function EnhancedTable() {
     }
     setSelected([]);
   };
-
   const handleClick = (event, name) => {
     const selectedIndex = selected.indexOf(name);
     let newSelected = [];
-
-    if (selectedIndex === -1) {
-      newSelected = newSelected.concat(selected, name);
+    if (selectedIndex === -1) {    newSelected = newSelected.concat(selected, name);
     } else if (selectedIndex === 0) {
       newSelected = newSelected.concat(selected.slice(1));
     } else if (selectedIndex === selected.length - 1) {
@@ -284,25 +257,18 @@ export default function EnhancedTable() {
         selected.slice(selectedIndex + 1),
       );
     }
-
     setSelected(newSelected);
   };
-
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };
-
-  const handleChangeRowsPerPage = (event) => {
-    setRowsPerPage(parseInt(event.target.value, 10));
+  const handleChangeRowsPerPage = (event) => {  setRowsPerPage(parseInt(event.target.value, 10));
     setPage(0);
   };
-
   const isSelected = (name) => selected.indexOf(name) !== -1;
-
   // Avoid a layout jump when reaching the last page with empty rows.
   const emptyRows =
     page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
-
   return (
     <Box sx={{ width: '100%' }}>
       <Paper sx={{ width: '100%', mb: 2 }}>
@@ -312,16 +278,15 @@ export default function EnhancedTable() {
             sx={{ minWidth: 900}}
             aria-labelledby="tableTitle"
             size={dense ? 'small' : 'medium'}
-          >
-            <EnhancedTableHead
-              numSelected={selected.length}
-              order={order}
-              orderBy={orderBy}
-              onSelectAllClick={handleSelectAllClick}
-              onRequestSort={handleRequestSort}
-              rowCount={rows.length}
-            />
-            <TableBody>
+          ><EnhancedTableHead
+          numSelected={selected.length}
+          order={order}
+          orderBy={orderBy}
+          onSelectAllClick={handleSelectAllClick}
+          onRequestSort={handleRequestSort}
+          rowCount={rows.length}
+        />
+                 <TableBody>
               {/* if you don't need to support IE11, you can replace the `stableSort` call with:
                  rows.slice().sort(getComparator(order, orderBy)) */}
               {stableSort(rows, getComparator(order, orderBy))
@@ -329,7 +294,6 @@ export default function EnhancedTable() {
                 .map((row, index) => {
                   const isItemSelected = isSelected(row.name);
                   const labelId = `enhanced-table-checkbox-${index}`;
-
                   return (
                     <TableRow
                       hover
