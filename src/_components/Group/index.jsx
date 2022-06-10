@@ -8,7 +8,7 @@ import './index.css';
 
 export default function GroupedSelect() {
   return (
-    <div class name="app-container">
+    <div class name="app-container" style={{background: 'white'}}>
       <FormControl sx={{ m: 1, minWidth: 120 }}>
         <InputLabel htmlFor="grouped-native-select">Bulk Action</InputLabel>
         <Select native defaultValue="" id="grouped-native-select" label="Grouping">
