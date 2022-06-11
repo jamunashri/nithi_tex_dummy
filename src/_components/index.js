@@ -6,12 +6,11 @@ import Footer from './Footer';
 import SearchBox  from "./SearchBar";
 import MuiTable from './Table';
 import Group from './Group';
-import Dashboard from './Dashboard';
+import Dashboard from './Dashboard/Dashboard';
 import  charts from '.charts';
 import Widgets from './widgets';
-import WidgetsBrand from './widgets/WidgetsBrand';
-import WidgetsDropdown from "./widgets/WidgetsDropdown";
-import  Icons  from './Icons'; 
+
+
 
 export {
     Dropdown,
@@ -21,12 +20,8 @@ export {
     Footer,
     SearchBox,
     MuiTable,
-    Group,
-    
+    Group, 
     Dashboard,
     charts,
-    Widgets,
-    WidgetsDropdown,
-    WidgetsBrand,
-    Icons 
+    Widgets
 }
