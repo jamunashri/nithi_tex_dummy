@@ -5,7 +5,8 @@ import Header from './Header';
 import Footer from './Footer';
 import SearchBox  from "./SearchBar";
 import MuiTable from './Table';
-import Group from './Group'
+import Group from './Group';
+import Dashboard from "./Dashboard";
 
 export {
     Dropdown,
@@ -15,5 +16,6 @@ export {
     Footer,
     SearchBox,
     MuiTable,
-    Group
+    Group,
+    Dashboard
 }
