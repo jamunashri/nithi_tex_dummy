@@ -7,7 +7,7 @@ function App() {
   return (
     <BrowserRouter history={history}>
       <Switch>
-       
+
       </Switch>
     </BrowserRouter>
   );
