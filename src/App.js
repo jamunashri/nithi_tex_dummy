@@ -1,5 +1,4 @@
 import "./App.css";
-import { Home, Authentication } from "./_pages/index";
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { createBrowserHistory } from 'history'
 
@@ -8,8 +7,7 @@ function App() {
   return (
     <BrowserRouter history={history}>
       <Switch>
-        <Route exact path={"/"}><Authentication /></Route>
-        <Route exact path={'/home'} ><Home /></Route>
+       
       </Switch>
     </BrowserRouter>
   );
