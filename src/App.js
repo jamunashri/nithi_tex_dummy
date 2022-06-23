@@ -1,13 +1,30 @@
-import "./App.css";
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { createBrowserHistory } from 'history'
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { createBrowserHistory } from "history";
+import { Home, About, Products, Cart, Login, Register } from "./Pages/index";
 
 function App() {
-  const history = createBrowserHistory()
+  const history = createBrowserHistory();
   return (
     <BrowserRouter history={history}>
       <Switch>
-
+        <Route exact path={"/"}>
+          <Home />
+        </Route>
+        <Route exact path={"/contact"}>
+          <About />
+        </Route>
+        <Route exact path={"/products"}>
+          <Products />
+        </Route>
+        <Route exact path={"/cart"}>
+          <Cart />
+        </Route>
+        <Route exact path={"/login"}>
+          <Login />
+        </Route>
+        <Route exact path={"/register"}>
+          <Register />
+        </Route>
       </Switch>
     </BrowserRouter>
   );
