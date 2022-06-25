@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Searchbar from "../Searchbar";
 import "./index.css";
 
 const Header = () => {
@@ -15,7 +14,7 @@ const Header = () => {
     <>
       <header class="header">
         <a href="/" class="logo">
-          <img src={require('../../assets/flogo.jpg')} height="60px" width="100px" />
+          <img src={require('../../assets/logo.JPG')} height="60px" width="100px" />
         </a>
 
         <form
@@ -52,30 +51,30 @@ const Header = () => {
         <div class="user">
           <i class="fa fa-user" aria-hidden="true"></i>
           <h3>User</h3>
-          <a href="/login">log out</a>
+          <a href="/admin">Log out</a>
         </div>
 
         <nav class="navbar">
           <a href="/">
-            <i class="fas fa-angle-right"></i> home
+            <i class="fas fa-angle-right"></i> Home
           </a>
           <a href="/about">
-            <i class="fas fa-angle-right"></i> about
+            <i class="fas fa-angle-right"></i> About
           </a>
           <a href="/products">
-            <i class="fas fa-angle-right"></i> products
+            <i class="fas fa-angle-right"></i> Products
           </a>
           <a href="/contact">
-            <i class="fas fa-angle-right"></i> contact
+            <i class="fas fa-angle-right"></i> Contact
           </a>
           <a href="/login">
-            <i class="fas fa-angle-right"></i> login
+            <i class="fas fa-angle-right"></i> Login
           </a>
           <a href="/register">
-            <i class="fas fa-angle-right"></i> register
+            <i class="fas fa-angle-right"></i> Register
           </a>
           <a href="/cart">
-            <i class="fas fa-angle-right"></i> cart
+            <i class="fas fa-angle-right"></i> Cart
           </a>
         </nav>
       </div>

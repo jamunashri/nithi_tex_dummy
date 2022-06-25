@@ -1,6 +1,6 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { createBrowserHistory } from "history";
-import { Home, About, Products, Cart, Login, Register } from "./Pages/index";
+import { Home, About, Products, Cart, Login, Register ,Admin, AdminUser} from "./Pages/index";
 
 function App() {
   const history = createBrowserHistory();
@@ -27,6 +27,12 @@ function App() {
         </Route>
         <Route exact path={"/about"}>
           <About />
+        </Route>
+        <Route exact path={"/admin"}>
+          <Admin />
+        </Route>
+        <Route exact path={'/admin/user'}>
+          <AdminUser />
         </Route>
       </Switch>
     </BrowserRouter>
