@@ -25,6 +25,9 @@ function App() {
         <Route exact path={"/register"}>
           <Register />
         </Route>
+        <Route exact path={"/about"}>
+          <About />
+        </Route>
       </Switch>
     </BrowserRouter>
   );

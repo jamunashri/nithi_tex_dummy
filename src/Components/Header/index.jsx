@@ -15,8 +15,7 @@ const Header = () => {
     <>
       <header class="header">
         <a href="/" class="logo">
-          {" "}
-          <i class="fas fa-store"></i> Nithi Tex{" "}
+          <img src={require('../../assets/flogo.jpg')} height="60px" width="100px" />
         </a>
 
         <form

@@ -9,22 +9,24 @@ const Category = () => {
 
       <div class="box-container">
         <a href="/products" class="box">
-          <img src="images/cat_img1.png" alt="" />
-          <h3>Bridal Sarees</h3>
+          <img src={require('../../assets/bridal2.jpg')} alt=""  />
+           <div class="content">
+            <h3>Bridal Sarees</h3>
+          </div>
         </a>
 
         <a href="/products" class="box">
-          <img src="images/cat_img2.png" alt="" />
+          <img src={require('../../assets/kotanji1.jpeg')} alt="" />
           <h3>Kottanji Sarees</h3>
         </a>
 
         <a href="/products" class="box">
-          <img src="images/cat_img3.png" alt="" />
+          <img src={require('../../assets/fancy1.jpg')} alt="" />
           <h3>Soft Skills</h3>
         </a>
 
         <a href="/products" class="box">
-          <img src="images/cat_img4.png" alt="" />
+          <img src={require('../../assets/wedding1.jpeg')} alt=""  />
           <h3>Wedding Sarees</h3>
         </a>
       </div>

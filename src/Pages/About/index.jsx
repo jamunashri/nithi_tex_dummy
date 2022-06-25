@@ -6,7 +6,6 @@ const About = () => {
   return (
     <>
     <Header />
-
     <section class="about">
       <div class="image">
         <img src={require('../../assets/Slider2.jpg')} alt="" />
