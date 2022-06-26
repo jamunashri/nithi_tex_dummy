@@ -6,6 +6,8 @@ import Login from './Login'
 import Register from './Register'
 import Admin from './Admin'
 import AdminUser from './AdminUser'
+import NewUser from './NewUser'
+import ViewUser from './ViewUser'
 export {
     Home,
     About,
@@ -14,5 +16,7 @@ export {
     Login,
     Register,
     Admin,
-    AdminUser
+    AdminUser,
+    NewUser,
+    ViewUser
 }
