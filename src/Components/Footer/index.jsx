@@ -8,7 +8,7 @@ const Footer = () => {
     <>
       <section class="quick-links">
         <a href="/" class="logo">
-          <i class="fas fa-store"></i> Nithi Tex
+        <img src={require('../../assets/flogo.jpg')} height="50px" width="80px" />
         </a>
         <div class="links">
           <a href="/"> home </a>
@@ -30,9 +30,8 @@ const Footer = () => {
 
       <section class="credit">
         <p>
-          created by <span>Nithi Tex</span> | all rights reserved!{" "}
+          created by <span>MarketFindout</span> | all rights reserved!{" "}
         </p>
-        <img src="images/card_img.png" alt="" />
       </section>
     </>
   );

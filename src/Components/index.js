@@ -1,13 +1,17 @@
 import Header from "./Header";
 import Footer from "./Footer";
-import Slider from "./Slider";
+import ProductSlider from "./ProductSlider";
 import Banner from "./Banner";
 import Category from "./Category";
+import MovingContent from "./MovingText";
+import Sliders from './Sliders'
 
 export {
     Header,
-    Slider,
+    ProductSlider,
     Footer,
     Banner,
-    Category
+    Category,
+    MovingContent,
+    Sliders
 }

@@ -24,8 +24,10 @@
     "react-circular-progressbar": "^2.0.4",
     "react-dom": "^18.2.0",
     "react-fontawesome": "^1.7.1",
+    "react-moving-text": "^0.0.7",
     "react-router-dom": "^5.3.3",
     "react-scripts": "5.0.1",
+    "react-slideshow-image": "^3.7.5",
     "recharts": "^2.1.11",
     "web-vitals": "^2.1.4"
   },

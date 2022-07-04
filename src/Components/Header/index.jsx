@@ -14,7 +14,7 @@ const Header = () => {
     <>
       <header class="header">
         <a href="/" class="logo">
-          <img src={require('../../assets/logo.JPG')} height="60px" width="100px" />
+          <img src={require('../../assets/nw.JPG')} height="80px" width="150px" />
         </a>
 
         <form

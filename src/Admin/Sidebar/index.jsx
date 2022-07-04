@@ -19,7 +19,7 @@ const Sidebar = () => {
       <div className="top">
         <Link to="/" style={{ textDecoration: "none" }}>
           <span className="logo">
-          <img src={require('../../assets/logo.JPG')} height="90px" width="170px" />
+          <img src={require('../../assets/nw.JPG')} height="80px" width="150px" />
           </span>
         </Link>
       </div>
