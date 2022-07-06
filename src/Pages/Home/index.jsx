@@ -1,15 +1,19 @@
 import React from "react";
-import { Banner, Footer, Header,Category , MovingContent, Sliders, ProductSlider} from "../../Components";
+import { Banner, Footer, Header,Category , MovingContent, Sliders, ProductSlider,CarouselItem } from "../../Components";
 
 const Home = () => {
   return (
     <>
     <MovingContent />
       <Header />
-      <Sliders />
       <Banner />
       <Category />
       <ProductSlider />
+      <ProductSlider/>
+      <ProductSlider />
+      <ProductSlider/>
+      <ProductSlider />
+      <ProductSlider/>
       <Footer />
     </>
   );

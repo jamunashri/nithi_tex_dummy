@@ -17,17 +17,49 @@ const ProductSlider = () => {
   ];
   return (
     <div>
-      <Slide slidesToScroll={2} slidesToShow={4} style={{ width: "100%" }}>
+      <Slide slidesToScroll={2} slidesToShow={3}>
         {product.map((i, index) => {
           return (
-            <div class="card">
-              <img
-                src={i}
-                alt="Avatar"
-                width="100%"
-                height="20%"
-              />
-              <div class="container"></div>
+            //             <div class="card">
+            //   <img src={i} alt="Denim Jeans" style={{width:'100%', height:'50%'}} />
+            //   <h1>Nithi Tex Saree</h1>
+            //   <p class="price">Rs.1200</p>
+            //   <p>Bridal Saree</p>
+            //   <p><button className="buy-now">Buy Now</button></p>
+            // </div>
+            <div class="shell">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="wsk-cp-product">
+                      <div class="wsk-cp-img">
+                        <img src={i} alt="Product" class="img-responsive" />
+                      </div>
+                      <div class="wsk-cp-text">
+                        <div class="category">
+                          <span>Bridal</span>
+                        </div>
+                        <div class="title-product">
+                          <h3>Bridal Saree</h3>
+                        </div>
+                        <div class="description-prod">
+                          <p>Description of the Product</p>
+                        </div>
+                        <div class="card-footer">
+                          <div class="wcf-left">
+                            <span class="price">Rs 1200.000</span>
+                          </div>
+                          <div class="wcf-right">
+                            <a href="#" class="buy-btn">
+                              <i class="zmdi zmdi-shopping-basket"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           );
         })}

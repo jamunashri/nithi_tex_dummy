@@ -1,7 +1,7 @@
 import React from 'react'
 import { Carousel } from '@trendyol-js/react-carousel';
 
-const Carousel  = () => {
+const CarouselItem  = () => {
 return (
 
     <section class="home">
@@ -53,4 +53,4 @@ return (
     </section>
 )
 }
-export default Carousel
+export default CarouselItem

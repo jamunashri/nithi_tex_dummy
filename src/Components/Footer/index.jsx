@@ -22,7 +22,7 @@ const Footer = () => {
 
         <div class="share">
           <a href="https://www.facebook.com/nithitexsarees/" target='blank' class="fab fa-facebook-f"></a>
-          <a href="https://twitter.com/NithiTex" class="fab fa-twitter" target='blank'></a>
+          <a href="https://twitter.com/NithiTex" class="fab fa-whatsapp" target='blank'></a>
           <a href="https://www.instagram.com/nithitex/" class="fab fa-instagram" target='blank'></a>
           <a href="https://www.youtube.com/channel/UCSROrhTc_QXCt4aKy-bsO7A" class="fab fa-youtube" target='blank'></a>
         </div>

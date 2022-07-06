@@ -5,6 +5,7 @@ import Banner from "./Banner";
 import Category from "./Category";
 import MovingContent from "./MovingText";
 import Sliders from './Sliders'
+import CarouselItem from './Carousel'
 
 export {
     Header,
@@ -13,5 +14,6 @@ export {
     Banner,
     Category,
     MovingContent,
-    Sliders
+    Sliders,
+    CarouselItem
 }
