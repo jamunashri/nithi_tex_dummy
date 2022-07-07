@@ -1,5 +1,4 @@
 import React from "react";
-
 import "../Header/index.css";
 import "./index.css";
 
@@ -21,8 +20,11 @@ const Footer = () => {
         </div>
 
         <div class="share">
+        <span style={{color: 'white', left: '1rem'}}>Follow us on</span>
+        <br />
+        <br />
           <a href="https://www.facebook.com/nithitexsarees/" target='blank' class="fab fa-facebook-f"></a>
-          <a href="https://twitter.com/NithiTex" class="fab fa-whatsapp" target='blank'></a>
+          <a href="https://wa.me/917092957279?text=I%27m%20interested%20in%20your%20saree%20for%20sale" class="fab fa-whatsapp" target='blank'></a>
           <a href="https://www.instagram.com/nithitex/" class="fab fa-instagram" target='blank'></a>
           <a href="https://www.youtube.com/channel/UCSROrhTc_QXCt4aKy-bsO7A" class="fab fa-youtube" target='blank'></a>
         </div>

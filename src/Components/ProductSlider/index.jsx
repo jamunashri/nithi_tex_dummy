@@ -1,6 +1,6 @@
 import React from "react";
-import { Slide } from "react-slideshow-image";
-import "react-slideshow-image/dist/styles.css";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import "./index.css";
 
 const ProductSlider = () => {
@@ -9,62 +9,92 @@ const ProductSlider = () => {
     require("../../assets/bridal2.jpg"),
     require("../../assets/bridal3.jpg"),
     require("../../assets/fancy1.jpg"),
+
     require("../../assets/fancy3.jpg"),
     require("../../assets/wedding1.jpeg"),
     require("../../assets/wedding2.jpg"),
     require("../../assets/wedding3.jpg"),
+
     require("../../assets/kotanji1.jpeg"),
+    require("../../assets/bridal2.jpg"),
+    require("../../assets/bridal3.jpg"),
+    require("../../assets/fancy1.jpg"),
   ];
   return (
-    <div>
-      <Slide slidesToScroll={2} slidesToShow={3}>
+    <>
+      <Carousel
+        additionalTransfrom={0}
+        arrows
+        autoPlay
+        autoPlaySpeed={1000}
+        centerMode={false}
+        className=""
+        containerClass="container-with-dots"
+        dotListClass=""
+        draggable
+        focusOnSelect={false}
+        infinite={false}
+        itemClass=""
+        keyBoardControl
+        minimumTouchDrag={80}
+        pauseOnHover
+        renderArrowsWhenDisabled={false}
+        renderButtonGroupOutside={false}
+        renderDotsOutside={false}
+        responsive={{
+          desktop: {
+            breakpoint: {
+              max: 3000,
+              min: 1024,
+            },
+            items: 4,
+            partialVisibilityGutter: 40,
+          },
+          mobile: {
+            breakpoint: {
+              max: 464,
+              min: 0,
+            },
+            items: 1,
+            partialVisibilityGutter: 30,
+          },
+          tablet: {
+            breakpoint: {
+              max: 1024,
+              min: 464,
+            },
+            items: 2,
+            partialVisibilityGutter: 30,
+          },
+        }}
+        rewind
+        rewindWithAnimation={false}
+        rtl={false}
+        shouldResetAutoplay
+        showDots={false}
+        sliderClass=""
+        slidesToSlide={2}
+        swipeable
+      >
         {product.map((i, index) => {
           return (
-            //             <div class="card">
-            //   <img src={i} alt="Denim Jeans" style={{width:'100%', height:'50%'}} />
-            //   <h1>Nithi Tex Saree</h1>
-            //   <p class="price">Rs.1200</p>
-            //   <p>Bridal Saree</p>
-            //   <p><button className="buy-now">Buy Now</button></p>
-            // </div>
-            <div class="shell">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="wsk-cp-product">
-                      <div class="wsk-cp-img">
-                        <img src={i} alt="Product" class="img-responsive" />
-                      </div>
-                      <div class="wsk-cp-text">
-                        <div class="category">
-                          <span>Bridal</span>
-                        </div>
-                        <div class="title-product">
-                          <h3>Bridal Saree</h3>
-                        </div>
-                        <div class="description-prod">
-                          <p>Description of the Product</p>
-                        </div>
-                        <div class="card-footer">
-                          <div class="wcf-left">
-                            <span class="price">Rs 1200.000</span>
-                          </div>
-                          <div class="wcf-right">
-                            <a href="#" class="buy-btn">
-                              <i class="zmdi zmdi-shopping-basket"></i>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="card">
+              <img
+                src={i}
+                alt="Denim Jeans"
+                style={{ width: "100%", height: "50%" }}
+              />
+              <h1>Nithi Tex Saree</h1>
+              <p class="price">Rs.1200</p>
+              <p>Bridal Saree</p>
+              <p>
+                <button className="buy-now">Buy Now</button>
+              </p>
             </div>
           );
         })}
-      </Slide>
-    </div>
+      </Carousel>
+    </>
   );
 };
 
