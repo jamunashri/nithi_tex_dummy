@@ -18,5 +18,5 @@ export {
     Admin,
     AdminUser,
     NewUser,
-    ViewUser
+    ViewUser,
 }

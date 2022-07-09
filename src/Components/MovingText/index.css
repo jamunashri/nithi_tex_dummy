@@ -7,8 +7,5 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  color: red;
-}
-.change-text {
-  color: red;
+  /* color: red; */
 }

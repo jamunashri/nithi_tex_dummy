@@ -3,52 +3,83 @@ import { Sidebar, Navbar} from '../../Admin/index'
 import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined";
 import { useState } from "react";
 
-const NewUser = ({  }) => {
+const NewUser = ({ title, inputs }) => {
   const [file, setFile] = useState("");
-const title = "Add new user"
- const inputs = [
-  {
-    id: 1,
-    label: "Username",
-    type: "text",
-    placeholder: "john_doe",
-  },
-  {
-    id: 2,
-    label: "Name and surname",
-    type: "text",
-    placeholder: "John Doe",
-  },
-  {
-    id: 3,
-    label: "Email",
-    type: "mail",
-    placeholder: "john_doe@gmail.com",
-  },
-  {
-    id: 4,
-    label: "Phone",
-    type: "text",
-    placeholder: "+1 234 567 89",
-  },
-  {
-    id: 5,
-    label: "Password",
-    type: "password",
-  },
-  {
-    id: 6,
-    label: "Address",
-    type: "text",
-    placeholder: "Elton St. 216 NewYork",
-  },
-  {
-    id: 7,
-    label: "Country",
-    type: "text",
-    placeholder: "USA",
-  },
-];
+// const title = "Add new user"
+//  const inputs = [
+//   {
+//     id: 1,
+//     label: "Name",
+//     type: "text",
+//     placeholder: "",
+//   },
+//   {
+//     //Needs to change as select box
+//     id: 2,
+//     label: "Category",
+//     type: "text",
+//     placeholder: "",
+//   },
+//   {
+//     id: 3,
+//     label: "SKU Number",
+//     type: "text",
+//     placeholder: "",
+//   },
+//   {
+//     id: 4,
+//     label: "Video URL",
+//     type: "text",
+//     placeholder: "",
+//   },
+//   {
+//     id: 5,
+//     label: "Color",
+//     type: "text",
+//   },
+//   {
+//     id: 6,
+//     label: "Quantity",
+//     type: "number",
+//     placeholder: "",
+//   },
+//   {
+//     id: 10,
+//     label: "Price",
+//     type: "text",
+//   },
+//   {
+//     id: 11,
+//     label: "Reseller Price",
+//     type: "text",
+//   },
+//   {
+//     id: 7,
+//     label: "Length",
+//     type: "text",
+//   },
+//   {
+//     id: 8,
+//     label: "Weight",
+//     type: "text",
+//   },
+//   {
+//     id: 9,
+//     label: "Blouse Attached",
+//     type: "text",
+//   },
+//   {
+//     id: 12,
+//     label: "Discount",
+//     type: "text",
+//   },
+//   {
+//     id: 13,
+//     label: "Description",
+//     type: "textarea",
+//   },
+ 
+// ];
   return (
     <div className="new">
       <Sidebar />
@@ -58,7 +89,7 @@ const title = "Add new user"
           <h1>{title}</h1>
         </div>
         <div className="bottom">
-          <div className="left">
+          {/* <div className="left">
             <img
               src={
                 file
@@ -67,7 +98,7 @@ const title = "Add new user"
               }
               alt=""
             />
-          </div>
+          </div> */}
           <div className="right">
             <form>
               <div className="formInput">

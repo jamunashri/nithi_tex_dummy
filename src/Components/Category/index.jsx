@@ -9,7 +9,7 @@ const Category = () => {
 
       <div class="box-container">
         <a href="/products" class="box">
-          <img src={require('../../assets/bridal2.jpg')} alt=""  />
+          <img src={require('../../assets/Banner1.jpeg')} alt="" width='100%' height={200} />
            <div class="content">
             <h3>Bridal Sarees</h3>
           </div>

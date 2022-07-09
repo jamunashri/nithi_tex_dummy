@@ -9,12 +9,10 @@ const ProductSlider = () => {
     require("../../assets/bridal2.jpg"),
     require("../../assets/bridal3.jpg"),
     require("../../assets/fancy1.jpg"),
-
     require("../../assets/fancy3.jpg"),
     require("../../assets/wedding1.jpeg"),
     require("../../assets/wedding2.jpg"),
     require("../../assets/wedding3.jpg"),
-
     require("../../assets/kotanji1.jpeg"),
     require("../../assets/bridal2.jpg"),
     require("../../assets/bridal3.jpg"),
@@ -26,7 +24,7 @@ const ProductSlider = () => {
         additionalTransfrom={0}
         arrows
         autoPlay
-        autoPlaySpeed={1000}
+        autoPlaySpeed={5000}
         centerMode={false}
         className=""
         containerClass="container-with-dots"
@@ -78,7 +76,7 @@ const ProductSlider = () => {
       >
         {product.map((i, index) => {
           return (
-            <div class="card">
+            <div class="card" key={index}>
               <img
                 src={i}
                 alt="Denim Jeans"
